@@ -5,6 +5,7 @@ export default () => {
     <div class = "login">
     <input type="email" placeholder="Ingresa tu correo">
     <input type="password" placeholder="Ingresa tu contraseña">
+    <button id ="submit"> <a href="#/submit">Conectar</a></li></button>
     </div>
     `;
 
