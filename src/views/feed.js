@@ -1,7 +1,6 @@
 export default () => {
   const feed = `
      
-      <h1>wall</h1>
       <p>ESTE ES EL MURO</p>
   
   `;
