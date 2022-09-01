@@ -1,7 +1,7 @@
 import login from "../views/login.js";
 import feed from "../views/feed.js";
 let content = document.getElementById("root");
-
+//este router imprime segun lo que se selecciona
 const router = (route) => {
   content.innerHTML = "";
   switch (route) {
