@@ -1,5 +1,7 @@
 import login from "../views/login.js";
 import feed from "../views/feed.js";
+import register from "../views/register.js";
+
 let content = document.getElementById("root");
 //este router imprime segun lo que se selecciona
 const router = (route) => {
@@ -10,7 +12,10 @@ const router = (route) => {
     case "#/Login": {
       return content.appendChild(login());
     }
-    case "#/submit": {
+    case "#/register": {
+      return content.appendChild(register());
+    }
+      case "#/submit": {
       return content.appendChild(feed());
     }
     default:

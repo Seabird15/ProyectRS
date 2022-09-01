@@ -14,6 +14,7 @@ export default () => {
   <a href="#/submit">Conectar</a>
   </span>
     </div>
+    <a class="registerlink" href="#/register">¿Aún no tienes una cuenta?¡Crea una aquí!</a>
     `;
 
   const divElement = document.createElement("div");
