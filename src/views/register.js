@@ -1,5 +1,5 @@
 export default () => {
-    const register = `
+  const register = `
     <div id="logo"><img src="./img/logotransparente.png" alt="logo-header"></div>
     <h2>¡Crea aquí tu cuenta!</h2>
     &nbsp;
@@ -17,8 +17,8 @@ export default () => {
         </div>
     
     `;
-  
-    const divElement = document.createElement("div");
-    divElement.innerHTML = register;
-    return divElement;
-  };
+
+  const divElement = document.createElement('form');
+  divElement.innerHTML = register;
+  return divElement;
+};

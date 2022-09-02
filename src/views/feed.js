@@ -5,7 +5,7 @@ export default () => {
   
   `;
 
-  const divElement = document.createElement("div");
+  const divElement = document.createElement('div');
   divElement.innerHTML = feed;
   return divElement;
 };

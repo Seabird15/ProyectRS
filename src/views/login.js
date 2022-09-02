@@ -17,7 +17,7 @@ export default () => {
     <a class="registerlink" href="#/register">¿Aún no tienes una cuenta?¡Crea una aquí!</a>
     `;
 
-  const divElement = document.createElement("div");
+  const divElement = document.createElement('div');
   divElement.innerHTML = login;
   return divElement;
 };
