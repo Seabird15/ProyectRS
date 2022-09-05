@@ -1,13 +1,19 @@
-import { router } from './router/router.js';
-// import { firebase } from "./firebase/config.js";
-// import { firebase } from "./firebase/startfirebase";
-// import {createUser} from "./services/authservice.js";
+//IMPORTAMOS LA FUNCION LOGINVIEW DESDE LOGIN.JS
+import { loginView } from "./views/login.js";
+import { router } from "./router/router.js";
+//LLAMAMOS A LA FUNCION PARA QUE MUESTRE EL LOGIN
+loginView();
+//ENVOLVEMOS EN UNA FUNCION FLECHA LA VAR ROOT
+let loginRoot = () => {
+  let root = document.getElementById("root");
+};
+//EXPORTAR VAR LOGINROOT
+export { loginRoot };
 
-// createUser()
-
-window.addEventListener('hashchange', () => {
+//EVENTO HASH
+window.addEventListener("hashchange", () => {
   router(window.location.hash);
 });
-window.addEventListener('load', () => {
+window.addEventListener("load", () => {
   router(window.location.hash);
 });

@@ -1,254 +1,79 @@
-/* 100% primera pantalla */
-
-html{
-
-  background: rgb(254, 74, 121);
-  background: linear-gradient(257deg, rgba(254, 74, 121, 1) 0%, rgba(255, 135, 178, 1) 47%, rgba(255, 248, 188, 1) 100%);
-  width: 100%;
-  height: 100%;
-}
-body {
-  margin: 0%;
-  padding: 0%;
-  box-sizing: 0%;
-  background: rgb(254,74,121);
-  background: linear-gradient(257deg, rgba(254,74,121,1) 0%,
-rgba(255,135,178,1) 47%, rgba(255,248,188,1) 100%);
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-background-position: center center;
-}
-.image {
-  display: flex;
-  justify-content: center;
-}
-#logo {
-  display: flex;
-  justify-content: center;
-}
-img{
-  width: 250px;
-  height: 250px;
-}
-.title {
-  display: flex;
-  justify-content: center;
-}
-nav {
-  display: flex;
-}
-.nav-link {
-  text-decoration: none;
-}
-
 @import url('http://fonts.cdnfonts.com/css/maus');
 
-h1{
-  display: flex;
-  justify-content: center;
-  margin-top: 5%;
-  color: white;
-  font-family: 'Maus', sans-serif;
-  font-size: 400%;
-}
-h2{
-  display: flex;
-  justify-content: center;
-  color: white;
-  margin-bottom: 1%;
-  font-family: Arial, Helvetica, sans-serif
-}
-h3 {
-  display: flex;
-  justify-content: center;
-  color: white;
-  font-size: small;
-  margin-bottom: 1%;
-  font-family: Arial, Helvetica, sans-serif;
-}
-h4 {
-display: flex;
-justify-content: center;
-color: white;
-font-size:medium;
-margin-bottom: 1%;
-font-family: Arial, Helvetica, sans-serif;
-}
-input {
-display: block;
-margin: auto;
-padding: 0.5%;
-width: 15%;
-}
-.registerlink {
-text-decoration: none;
-display: flex;
-justify-content: center;
-color: white;
-font-size:medium;
-margin-top: 1%;
-font-family: Arial, Helvetica, sans-serif;
-font-weight: bold;
-}
-.botonlogin {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-self: center;
-}
-footer {
-  display: flex;
-  justify-content: left;
-  margin-left: 1%;
-  color: #fef6f8;
-  font-family: Arial, Helvetica, sans-serif;
-  opacity: 50%;
-  flex-direction: column;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-p{
-  display: flex;
-  justify-content: center;
+body {
+    background-color:#F65A83;
 }
-ul {
-  display: flex;
-  padding: 5px;
-  gap: 20px;
-  justify-content: center;
+/*VIEW LOGIN*/
+.imgLogo {
+    display: flex;
+    justify-content: center;
 }
-ul li {
-  background-color: aliceblue;
-  padding: 5px;
-  border-radius: 5px;
-  cursor: pointer;
-  list-style: none;
+img {
+    width: 250px;
+    height: 250px;
 }
-ul li a {
-  text-decoration: none;
+#logo {
+    display: flex;
+    justify-content: center;
 }
-
-ul li:hover{
-  background-color: aqua;
+.title {
+    display: flex;
+    justify-content: center;
 }
-
-/* login */
-
-.login input {
-  display: block;
-  margin: auto;
+.titleLogin{
+    display: flex;
+    justify-content: center;
+    color: rgb(243, 246, 248);
+    font-family: 'Maus', sans-serif;
+    font-size: 400%;
 }
-.login a {
-  text-decoration: none;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
+.subtituloLogin {
+    text-align: center;
+    color: white;
+    
 }
-.button-82-pushable {
-  position: relative;
-  border: none;
-  background: transparent;
-  padding: 0;
-  cursor: pointer;
-  outline-offset: 4px;
-  transition: filter 250ms;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  margin-top: 1%;
-  display: flex;
-  margin:auto;
-  margin-top: 1%;
+.input{
+    display: block;
+    margin: auto;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
 }
 
-.button-82-shadow {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 12px;
-  background: hsl(0deg 0% 0% / 0.25);
-  will-change: transform;
-  transform: translateY(2px);
-  transition:
-    transform
-    600ms
-    cubic-bezier(.3, .7, .4, 1);
+/* btns*/
+
+a {
+    display: flex;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
 }
 
-.button-82-edge {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 12px;
-  background: linear-gradient(
-    to left,
-    hsl(340deg 100% 16%) 0%,
-    hsl(340deg 100% 32%) 8%,
-    hsl(340deg 100% 32%) 92%,
-    hsl(340deg 100% 16%) 100%
-  );
+button{
+    display: block;
+    margin: auto;
+    padding: 1%;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: tomato;
+    cursor: pointer;
+}
+.btnRegister {
+    text-decoration: none;
+    color: white;
 }
 
-.button-82-front {
-  display: block;
-  position: relative;
-  padding: 12px 27px;
-  border-radius: 12px;
-  font-size: 1.1rem;
-  color: white;
-  background: hsl(345deg 100% 47%);
-  will-change: transform;
-  transform: translateY(-4px);
-  transition:
-    transform
-    600ms
-    cubic-bezier(.3, .7, .4, 1);
-}
+/*VIEWS REGISTER*/ 
 
-@media (min-width: 768px) {
-  .button-82-front {
-    font-size: 1.25rem;
-    padding: 12px 42px;
-  }
-}
-
-.button-82-pushable:hover {
-  filter: brightness(110%);
-  -webkit-filter: brightness(110%);
-}
-
-.button-82-pushable:hover .button-82-front {
-  transform: translateY(-6px);
-  transition:
-    transform
-    250ms
-    cubic-bezier(.3, .7, .4, 1.5);
-}
-
-.button-82-pushable:active .button-82-front {
-  transform: translateY(-2px);
-  transition: transform 34ms;
-}
-
-.button-82-pushable:hover .button-82-shadow {
-  transform: translateY(4px);
-  transition:
-    transform
-    250ms
-    cubic-bezier(.3, .7, .4, 1.5);
-}
-
-.button-82-pushable:active .button-82-shadow {
-  transform: translateY(1px);
-  transition: transform 34ms;
-}
-
-.button-82-pushable:focus:not(:focus-visible) {
-  outline: none;
-}
-.git{
-  text-align: center;
+.h2Register{
+    color: white;
+    text-align: center;
 }
