@@ -78,11 +78,12 @@ export function loginView() {
   linkRegister.setAttribute("class", "btnRegister ");
   form.appendChild(linkRegister);
 
-  //LINKS GIT
+  //link de github
   const gitHub = document.createElement("div");
+  gitHub.setAttribute("class", "git");
   root.appendChild(gitHub);
 
-  const linkGit1 = document.createElement("a");
+  const linkGit1 = document.createElement("i");
   linkGit1.setAttribute(
     "href",
     "https://github.com/Seabird15/SCL021-social-network"
@@ -93,16 +94,25 @@ export function loginView() {
   const iGit1 = document.createElement("i");
   iGit1.setAttribute("class", "fa-brands fa-github fa-2x");
   linkGit1.appendChild(iGit1);
-  // const spanBtn = document.createElement("span");
-  // spanBtn.setAttribute("class", "button-82-shadow");
-  // btnLogin.appendChild(spanBtn);
 
-  // const spanBtn2 = document.createElement("span");
-  // spanBtn2.setAttribute("class", "button-82-edge");
-  // btnLogin.appendChild(spanBtn2);
+  const linkGit2 = document.createElement("i");
+  linkGit2.setAttribute(
+    "href",
+    "github.com/Nicobustosgonzalez/SCL021-social-network"
+  );
+  linkGit2.setAttribute("target", "_blank");
+  gitHub.appendChild(linkGit2);
 
-  // const spanBtn3 = document.createElement("span");
-  // spanBtn3.setAttribute("class", "button-82-front-text");
-  // btnLogin.appendChild(spanBtn3);
+  const iGit2 = document.createElement("i");
+  iGit2.setAttribute("class", "fa-brands fa-github fa-2x");
+  linkGit1.appendChild(iGit2);
+
+  const linkGit3 = document.createElement("i");
+  linkGit3.setAttribute("href", "github.com/LissetteQ/SCL021-social-network");
+  linkGit3.setAttribute("target", "_blank");
+  gitHub.appendChild(linkGit3);
+
+  const iGit3 = document.createElement("i");
+  iGit3.setAttribute("class", "fa-brands fa-github fa-2x");
+  linkGit3.appendChild(iGit3);
 }
-
