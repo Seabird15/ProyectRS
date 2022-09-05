@@ -105,3 +105,4 @@ export function loginView() {
   // spanBtn3.setAttribute("class", "button-82-front-text");
   // btnLogin.appendChild(spanBtn3);
 }
+
