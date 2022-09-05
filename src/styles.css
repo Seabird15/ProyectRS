@@ -1,3 +1,5 @@
+@import url('http://fonts.cdnfonts.com/css/maus');
+
 * {
     margin: 0;
     padding: 0;
@@ -8,60 +10,70 @@
 body {
     background-color:#F65A83;
 }
-.image {
+/*VIEW LOGIN*/
+.imgLogo {
     display: flex;
     justify-content: center;
+}
+img {
+    width: 250px;
+    height: 250px;
 }
 #logo {
     display: flex;
     justify-content: center;
 }
-img{
-    width: 250px;
-    height: 250px;
-}
 .title {
     display: flex;
     justify-content: center;
 }
-nav {
-    display: flex;
-}
-.nav-link {
-    text-decoration: none;
-}
-h1{
+.titleLogin{
     display: flex;
     justify-content: center;
+    color: rgb(243, 246, 248);
+    font-family: 'Maus', sans-serif;
+    font-size: 400%;
 }
-p{
-    display: flex;
-    justify-content: center;
+.subtituloLogin {
+    text-align: center;
+    color: white;
+    
 }
-ul {
-    display: flex;
-    padding: 5px;
-    gap: 20px;
-    justify-content: center;
-}
-ul li {
-    background-color: aliceblue;
-    padding: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-    list-style: none;
-}
-ul li a {
-    text-decoration: none;
-}
-
-ul li:hover{
-    background-color: aqua;
-}
-
-/* login */
-
-.login input {
+.input{
     display: block;
     margin: auto;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+/* btns*/
+
+a {
+    display: flex;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+button{
+    display: block;
+    margin: auto;
+    padding: 1%;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: tomato;
+    cursor: pointer;
+}
+.btnRegister {
+    text-decoration: none;
+    color: white;
+}
+
+/*VIEWS REGISTER*/ 
+
+.h2Register{
+    color: white;
+    text-align: center;
 }

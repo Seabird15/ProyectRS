@@ -1,12 +1,7 @@
-export default () => {
-  const feed = `
-     
-      <h1>wall</h1>
-      <p>ESTE ES EL MURO</p>
-  
-  `;
+import { loginRoot } from "../main.js";
 
-  const divElement = document.createElement("div");
-  divElement.innerHTML = feed;
-  return divElement;
-};
+export function feedView() {
+  const titleFeed = document.createElement("h1");
+  titleFeed.textContent = "ESTE ES EL MURO";
+  root.appendChild(titleFeed);
+}
