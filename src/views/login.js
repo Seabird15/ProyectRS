@@ -13,7 +13,7 @@ export function loginView() {
   root.appendChild(divImg);
   //IMAGEN LOGO
   const logo = document.createElement("img");
-  logo.src = "./img/logoo.jpg";
+  logo.src = "./img/logotransparente.png";
   logo.setAttribute("class", "img");
   logo.setAttribute("id", "logo");
   divImg.appendChild(logo);
@@ -61,5 +61,17 @@ export function loginView() {
   linkRegister.textContent = "¿Aún no tienes una cuenta? ¡Crea una aqui!";
   linkRegister.setAttribute("class", "btnRegister ");
   form.appendChild(linkRegister);
-
 }
+//link github
+const gitHub = document.createElement("div");
+//gitHub.appendChild (gitHub);
+
+const linkGit1 = document.createElement("img");
+linkGit1.setAttribute("href", "https://github.com/Seabird15/SCL021-social-network");
+linkGit1.setAttribute("target", "_blank");
+//gitHub.appendChild(linkGit1);
+
+const iGit1 = document.createElement("i");
+iGit1.setAttribute("class","fa-brands fa-github fa-2x");
+//iGit1.appendChild(iGit1);
+
