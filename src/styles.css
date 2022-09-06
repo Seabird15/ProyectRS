@@ -94,10 +94,10 @@ button:hover {
     margin-top: 2%;
     margin-left: 2%;
 }
-.githublogo {
-    width: 50%;
-    height: 50%;
-    opacity: 50%;
+.i{
+    width: 10%;
+    height: 10%;
+    opacity: 30%;
     display:inline-block;
     margin-top: 100%;
     margin-bottom: 0%;

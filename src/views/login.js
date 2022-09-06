@@ -62,3 +62,16 @@ export function loginView() {
   linkRegister.setAttribute("class", "btnRegister ");
   form.appendChild(linkRegister);
 }
+//link github
+const gitHub = document.createElement("div");
+//gitHub.appendChild (gitHub);
+
+const linkGit1 = document.createElement("img");
+linkGit1.setAttribute("href", "https://github.com/Seabird15/SCL021-social-network");
+linkGit1.setAttribute("target", "_blank");
+//gitHub.appendChild(linkGit1);
+
+const iGit1 = document.createElement("i");
+iGit1.setAttribute("class","fa-brands fa-github fa-2x");
+//iGit1.appendChild(iGit1);
+
