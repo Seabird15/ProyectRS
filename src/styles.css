@@ -80,3 +80,12 @@ button:hover {
     color: white;
     text-align: center;
 }
+
+/*VIEW FEED*/
+
+.logoFeed {
+    width: 20%;
+    height: 20%;
+    margin-top: 20%;
+    margin-left: 10%;
+}
