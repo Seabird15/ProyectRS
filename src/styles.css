@@ -89,3 +89,31 @@ button:hover {
     margin-top: 20%;
     margin-left: 10%;
 }
+/*VIEW FEED*/
+
+.logoFeed {
+    width: 20%;
+    height: 20%;
+    margin-top: 10%;
+    margin-left: 5%;
+}
+/*INPUT FEED*/
+.inputFeedState{
+    padding: 10%;
+    border-radius: 10%;
+}
+.fileFeed {
+    display: block;
+    margin: auto;
+    margin-top: 5px;
+    
+}
+/*IMG PROFILE*/
+.profileImg{
+    float:right;
+    margin: 5px;
+    width: 10%;
+    height: 10%;
+    
+
+}
