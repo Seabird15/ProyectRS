@@ -6,7 +6,7 @@ export function feedView() {
   root.appendChild(containFeed);
 
   const logoFeed = document.createElement("img");
-  logoFeed.src = "./img/logoo.jpg";
+  logoFeed.src = "./img/logotransparente.png";
   logoFeed.setAttribute("class", "logoFeed");
   containFeed.appendChild(logoFeed);
 }

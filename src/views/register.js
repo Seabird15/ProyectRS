@@ -12,7 +12,7 @@ export function registerView() {
   root.appendChild(divImg);
   //IMAGEN LOGO
   const logo = document.createElement("img");
-  logo.src = "./img/logoo.jpg";
+  logo.src = "./img/logotransparente.png";
   logo.setAttribute("class", "img");
   logo.setAttribute("id", "logo");
   divImg.appendChild(logo);
@@ -39,7 +39,11 @@ export function registerView() {
   inputRegisterPass.setAttribute("type", "password");
   form.appendChild(inputRegisterPass);
   //INPUT NOMBRE USUARIO
-  const inputRegisterName = document.createElement("input");
+  const inputRegisterUser = document.createElement("input");
+  inputRegisterUser.setAttribute("placeholder", "Nombre usuario");
+  inputRegisterUser.setAttribute("type", "text");
+  inputRegisterUser.setAttribute("class", "input");
+  form.appendChild(inputRegisterUser);
 
   //BUTTON REGISTER
   const btnRegister = document.createElement("button");
