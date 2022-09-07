@@ -75,7 +75,7 @@ export function loginView() {
   linkGit1.setAttribute("target", "_blank");
   item.appendChild(linkGit1);
 
-  const iGit2 = document.createElement("i");
+  const iGit2 = document.createElement("a");
   iGit2.setAttribute("class", "fa-brands fa-github fa-2x");
   item.appendChild(iGit2);
 

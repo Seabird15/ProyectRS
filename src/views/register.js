@@ -1,4 +1,6 @@
 import { loginRoot } from "../main.js";
+import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-auth.js";
+import { auth } from "../firebase/startfirebase.js";
 
 export function registerView() {
   const item = document.createElement("div");
@@ -63,10 +65,16 @@ export function registerView() {
   form.appendChild(btnRegister);
   document.querySelector("form").addEventListener("submit", e => {
     e.preventDefault();
-    const data = Object.fromEntries(
-      new FormData(e.target)
-    );
-    console.log(JSON.stringify(data))
+    const email = document.querySelector("#email").value;
+    const pass = document.querySelector("#password").value;
+    const user = document.querySelector("#userName").value;
+    createUserWithEmailAndPassword(auth, email, pass).then((userCredential)=>{
+      console.log("visto")
+    })
+    //const user = Object.fromEntries(
+      //new Formuser(e.target)
+    //);
+    //console.log(JSON.stringify(data))
 
   })
 }
