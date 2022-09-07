@@ -13,7 +13,7 @@ export { loginRoot };
 
 //EVENTO HASH
 window.addEventListener("hashchange", () => {
-  console.log("yo soy el hash")
+  //console.log("yo soy el hash")
   const view = router(window.location.hash);
   root.appendChild(view)
 });

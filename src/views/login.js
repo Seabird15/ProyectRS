@@ -1,7 +1,7 @@
 import { loginRoot } from "../main.js";
 
 export function loginView() {
-  console.log("se ejecuta loginView en Login.js")
+  console.log("se ejecuta loginView en Login.js");
   const item = document.createElement("div");
   const title = document.createElement("h1");
   title.textContent = "iPet";
@@ -14,7 +14,7 @@ export function loginView() {
   item.appendChild(divImg);
   //IMAGEN LOGO
   const logo = document.createElement("img");
-  logo.src = "./img/logoo.jpg";
+  logo.src = "./img/logotransparente.png";
   logo.setAttribute("class", "img");
   logo.setAttribute("id", "logo");
   divImg.appendChild(logo);
@@ -61,39 +61,47 @@ export function loginView() {
   linkRegister.setAttribute("href", "#/register");
   linkRegister.textContent = "¿Aún no tienes una cuenta? ¡Crea una aqui!";
   linkRegister.setAttribute("class", "btnRegister ");
-item.appendChild(linkRegister);
+  item.appendChild(linkRegister);
 
   //link github
   const gitHub = document.createElement("div");
-  item.appendChild (gitHub);
+  item.appendChild(gitHub);
 
- const linkGit1 = document.createElement("i");
- linkGit1.setAttribute("href", "https://github.com/Seabird15/SCL021-social-network");
- linkGit1.setAttribute("target", "_blank");
+  const linkGit1 = document.createElement("a");
+  linkGit1.setAttribute(
+    "href",
+    "https://github.com/Seabird15/SCL021-social-network"
+  );
+  linkGit1.setAttribute("target", "_blank");
   item.appendChild(linkGit1);
 
   const iGit2 = document.createElement("i");
-  iGit2.setAttribute("class","fa-brands fa-github fa-2x");
+  iGit2.setAttribute("class", "fa-brands fa-github fa-2x");
   item.appendChild(iGit2);
 
   const linkGit2 = document.createElement("i");
-  linkGit2.setAttribute("href", "https://github.com/LissetteQ/SCL021-social-network");
+  linkGit2.setAttribute(
+    "href",
+    "https://github.com/LissetteQ/SCL021-social-network"
+  );
   linkGit2.setAttribute("target", "_blank");
   item.appendChild(linkGit2);
- 
-   const GitHub2 = document.createElement("i");
-   GitHub2.setAttribute("class","fa-brands fa-github fa-2x");
-item.appendChild(GitHub2);
+
+  const GitHub2 = document.createElement("i");
+  GitHub2.setAttribute("class", "fa-brands fa-github fa-2x");
+  item.appendChild(GitHub2);
 
   const linkGit3 = document.createElement("i");
-  linkGit3.setAttribute("href", "https://github.com/Nicobustosgonzalez/SCL021-social-network");
+  linkGit3.setAttribute(
+    "href",
+    "https://github.com/Nicobustosgonzalez/SCL021-social-network"
+  );
   linkGit3.setAttribute("target", "_blank");
-   item.appendChild(linkGit2);
- 
-   const GitHub3 = document.createElement("i");
-   GitHub3.setAttribute("class","fa-brands fa-github fa-2x");
-   item.appendChild(GitHub3);
+  item.appendChild(linkGit2);
 
-   return item;
+  const GitHub3 = document.createElement("i");
+  GitHub3.setAttribute("class", "fa-brands fa-github fa-2x");
+  item.appendChild(GitHub3);
 
+  return item;
 }

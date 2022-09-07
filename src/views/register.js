@@ -6,13 +6,15 @@ export function registerView() {
   title.textContent = "iPet";
   title.setAttribute("class", "titleLogin");
   root.appendChild(title);
+
   //CONTENEDOR IMAGEN
   const divImg = document.createElement("div");
   divImg.classList.add("imgLogo");
   root.appendChild(divImg);
+
   //IMAGEN LOGO
   const logo = document.createElement("img");
-  logo.src = "./img/logoo.jpg";
+  logo.src = "./img/logotransparente.png";
   logo.setAttribute("class", "img");
   logo.setAttribute("id", "logo");
   divImg.appendChild(logo);
@@ -31,14 +33,17 @@ export function registerView() {
   //INPUTS REGISTER EMAIL
   const inputRegister = document.createElement("input");
   inputRegister.setAttribute("placeholder", "Ingresa tu correo");
-  inputRegister.setAttribute("class", "btnRegister ");
+  inputRegister.setAttribute("id", "email");
+  inputRegister.setAttribute("name", "email");
   inputRegister.setAttribute("class", "input");
+  inputRegister.setAttribute("type", "text");
   form.appendChild(inputRegister);
 
   //INPUT REGISTER PASS
   const inputRegisterPass = document.createElement("input");
   inputRegisterPass.setAttribute("placeholder", "Ingresa tu contraseña");
-  inputRegisterPass.setAttribute("class", "btnRegister ");
+  inputRegisterPass.setAttribute("id","password");
+  inputRegisterPass.setAttribute("name","password");
   inputRegisterPass.setAttribute("class", "input");
   inputRegisterPass.setAttribute("type", "password");
   form.appendChild(inputRegisterPass);
@@ -46,6 +51,8 @@ export function registerView() {
   //INPUT NOMBRE USUARIO
   const inputRegisterUser = document.createElement("input");
   inputRegisterUser.setAttribute("placeholder", "Nombre usuario");
+  inputRegisterUser.setAttribute("id","userName");
+  inputRegisterUser.setAttribute("name", "userName");
   inputRegisterUser.setAttribute("type", "text");
   inputRegisterUser.setAttribute("class", "input");
   form.appendChild(inputRegisterUser);
@@ -54,4 +61,12 @@ export function registerView() {
   const btnRegister = document.createElement("button");
   btnRegister.textContent = "Enviar";
   form.appendChild(btnRegister);
+  document.querySelector("form").addEventListener("submit", e => {
+    e.preventDefault();
+    const data = Object.fromEntries(
+      new FormData(e.target)
+    );
+    console.log(JSON.stringify(data))
+
+  })
 }
