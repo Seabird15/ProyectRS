@@ -1,6 +1,8 @@
 import { loginRoot } from "../main.js";
 
 export function feedView() {
+  const root = document.createElement("div");
+
   //IMAGEN USUARIO
   const profileImg = document.createElement("img");
   profileImg.setAttribute("class", "profileImg");
@@ -41,4 +43,6 @@ export function feedView() {
   const btnStateFeed = document.createElement("button");
   btnStateFeed.textContent = "Publicar";
   root.appendChild(btnStateFeed);
+  
+  return root
 }

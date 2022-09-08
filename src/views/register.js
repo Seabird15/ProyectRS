@@ -3,7 +3,7 @@ import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebase
 import { auth } from "../firebase/startfirebase.js";
 
 export function registerView() {
-  const item = document.createElement("div");
+  const root = document.createElement("div");
   const title = document.createElement("h1");
   title.textContent = "iPet";
   title.setAttribute("class", "titleLogin");
@@ -63,18 +63,18 @@ export function registerView() {
   const btnRegister = document.createElement("button");
   btnRegister.textContent = "Enviar";
   form.appendChild(btnRegister);
-  document.querySelector("form").addEventListener("submit", e => {
+  
+  //se añade la funcion para registrarse y crear cuenta
+  form.addEventListener("submit", e => {
     e.preventDefault();
-    const email = document.querySelector("#email").value;
-    const pass = document.querySelector("#password").value;
-    const user = document.querySelector("#userName").value;
+    const email = inputRegister.value;
+    const pass = inputRegisterPass.value;
     createUserWithEmailAndPassword(auth, email, pass).then((userCredential)=>{
+
       console.log("visto")
     })
-    //const user = Object.fromEntries(
-      //new Formuser(e.target)
-    //);
-    //console.log(JSON.stringify(data))
+   
 
-  })
+ }) 
+ return root;
 }

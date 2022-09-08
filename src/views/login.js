@@ -18,6 +18,7 @@ export function loginView() {
   logo.setAttribute("class", "img");
   logo.setAttribute("id", "logo");
   divImg.appendChild(logo);
+
   //TITULO INICIO SESION Y RECUPERAR CONTRASEÑA
   const loginH3 = document.createElement("h3");
   loginH3.textContent = "Iniciar Sesión";
@@ -46,15 +47,13 @@ export function loginView() {
   inputPassword.setAttribute("type", "password");
   inputPassword.setAttribute("class", "input");
   form.appendChild(inputPassword);
+  
   //BOTONES INPUT
   const btnLogin = document.createElement("button");
   btnLogin.setAttribute("class", "linkSubmit");
+  btnLogin.setAttribute("type", "submit");
+  btnLogin.innerText = "entrar"
   item.appendChild(btnLogin);
-
-  const linkSubmit = document.createElement("a");
-  linkSubmit.setAttribute("href", "#/feed");
-  linkSubmit.textContent = "Conectar";
-  item.appendChild(linkSubmit);
 
   //BOTON REGISTRARSE
   const linkRegister = document.createElement("a");
@@ -89,5 +88,11 @@ export function loginView() {
   linkGit3.setAttribute("target", "_blank");
   item.appendChild(linkGit3);
 
+  form.addEventListener("submit", () => {
+    console.log("submit")
+  } )
+  
+  
   return item;
+
 }
