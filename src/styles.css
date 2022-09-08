@@ -12,8 +12,8 @@
 body {
     background: rgb(254,74,121);
     background: linear-gradient(257deg, rgba(254,74,121,1) 0%, rgba(255,135,178,1) 47%, rgba(255,248,188,1) 100%);
-width: auto;
-height: auto;
+    max-height: 100%;
+max-height: 100%;
 }
 /*VIEW LOGIN*/
 .imgLogo {
@@ -134,6 +134,17 @@ button:hover {
     margin: 5px;
     width: 10%;
     height: 10%;
+}   
+
+/* Git */
+.fa-brands{
+    margin-left: 23%;
+    margin-top: 6%; 
     
+}
+
+
+.input search{
+margin-left: 50%;
 
 }

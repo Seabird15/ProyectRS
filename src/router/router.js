@@ -11,7 +11,7 @@ const router = (route) => {
   switch (route) {
     case "": {
       //console.log("sejecuta loginView")
-      return loginView();
+      return loginView(); 
     
       //   return alert("Bienvenidx!");
     }

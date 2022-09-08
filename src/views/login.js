@@ -63,45 +63,31 @@ export function loginView() {
   linkRegister.setAttribute("class", "btnRegister ");
   item.appendChild(linkRegister);
 
-  //link github
+  //contenedor github //No funciona/ iconos estan en el aire sin contenedor
   const gitHub = document.createElement("div");
+  gitHub.setAttribute("class","gitContainer")
   item.appendChild(gitHub);
 
+  //Git Dani//
   const linkGit1 = document.createElement("a");
-  linkGit1.setAttribute(
-    "href",
-    "https://github.com/Seabird15/SCL021-social-network"
-  );
+  linkGit1.setAttribute("class", "fa-brands fa-github fa-2x");
+  linkGit1.setAttribute("href", "https://github.com/Seabird15/SCL021-social-network");
   linkGit1.setAttribute("target", "_blank");
   item.appendChild(linkGit1);
 
-  const iGit2 = document.createElement("a");
-  iGit2.setAttribute("class", "fa-brands fa-github fa-2x");
-  item.appendChild(iGit2);
-
-  const linkGit2 = document.createElement("i");
-  linkGit2.setAttribute(
-    "href",
-    "https://github.com/LissetteQ/SCL021-social-network"
-  );
+   //Git Liss//
+  const linkGit2 = document.createElement("a");
+  linkGit2.setAttribute("class", "fa-brands fa-github fa-2x");
+  linkGit2.setAttribute("href", "https://github.com/LissetteQ/SCL021-social-network");
   linkGit2.setAttribute("target", "_blank");
   item.appendChild(linkGit2);
 
-  const GitHub2 = document.createElement("i");
-  GitHub2.setAttribute("class", "fa-brands fa-github fa-2x");
-  item.appendChild(GitHub2);
-
-  const linkGit3 = document.createElement("i");
-  linkGit3.setAttribute(
-    "href",
-    "https://github.com/Nicobustosgonzalez/SCL021-social-network"
-  );
+   //Git Nico//
+  const linkGit3 = document.createElement("a");
+  linkGit3.setAttribute("class", "fa-brands fa-github fa-2x");
+  linkGit3.setAttribute("href", "https://github.com/Nicobustosgonzalez/SCL021-social-network");
   linkGit3.setAttribute("target", "_blank");
-  item.appendChild(linkGit2);
-
-  const GitHub3 = document.createElement("i");
-  GitHub3.setAttribute("class", "fa-brands fa-github fa-2x");
-  item.appendChild(GitHub3);
+  item.appendChild(linkGit3);
 
   return item;
 }

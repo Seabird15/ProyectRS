@@ -11,6 +11,7 @@ export function feedView() {
     const Buscador = document.createElement("input");
     Buscador.setAttribute("class","Buscador");
     Buscador.setAttribute("type", "search")
+    Buscador.setAttribute("style", "margin-left:20%")
   root.appendChild(Buscador);
     
   //CAJA DE ESTADO Y LOGO

@@ -7,6 +7,6 @@ describe('router imprime los elementos de la pagina', () => {
   });
 });
 it('Deberia imprimir los elementos de la pagina', () => {
-  const resultado = router('#/Login');
+  const resultado = router('#/register');
   expect(resultado['elemento.innerHTML'].router).toBe('route');
 });
