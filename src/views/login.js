@@ -4,8 +4,10 @@ import { router } from "../router/router.js";
 import {
   getAuth,
   signInWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithPopup,
 } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-auth.js";
-import { auth } from "../firebase/startfirebase.js";
+import { auth, provider } from "../firebase/startfirebase.js";
 
 export function loginView() {
   console.log("se ejecuta loginView en Login.js");
@@ -85,6 +87,20 @@ export function loginView() {
   linkRegister.textContent = "¿Aún no tienes una cuenta? ¡Crea una aqui!";
   linkRegister.setAttribute("class", "btnRegister ");
   item.appendChild(linkRegister);
+
+  //BTN GOOGLE
+  const btnGoogle = document.createElement("button");
+  btnGoogle.setAttribute("id", "btnGoogle");
+  btnGoogle.textContent = "google";
+  btnGoogle.addEventListener("click", (event) => {
+    event.preventDefault();
+    signInWithPopup(auth, provider).then((result) => {
+      const credential = GoogleAuthProvider.credentialFromResult(result);
+      console.log("hola2");
+      return credential;
+    });
+  });
+  item.appendChild(btnGoogle);
 
   //contenedor github //No funciona/ iconos estan en el aire sin contenedor
   const gitHub = document.createElement("div");
