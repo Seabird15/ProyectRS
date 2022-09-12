@@ -1,4 +1,6 @@
 import { loginRoot } from "../main.js";
+import { registerView } from "./register.js";
+import { router } from "../router/router.js";
 
 export function loginView() {
   console.log("se ejecuta loginView en Login.js");
@@ -58,8 +60,10 @@ export function loginView() {
   item.appendChild(btnLogin);
 
   //BOTON REGISTRARSE
-  const linkRegister = document.createElement("a");
-  linkRegister.setAttribute("href", "#/register");
+  const linkRegister = document.createElement("button");
+  linkRegister.addEventListener("click", () => {
+    window.location.hash = "#/register";
+  });
   linkRegister.textContent = "¿Aún no tienes una cuenta? ¡Crea una aqui!";
   linkRegister.setAttribute("class", "btnRegister ");
   item.appendChild(linkRegister);

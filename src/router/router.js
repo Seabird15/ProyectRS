@@ -9,6 +9,9 @@ const router = (route) => {
   content.innerHTML = "";
   //console.log({route});
   switch (route) {
+    case "": {
+      return loginView();
+    }
     case "#/login": {
       //console.log("sejecuta loginView")
       return loginView();
