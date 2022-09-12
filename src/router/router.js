@@ -9,7 +9,7 @@ const router = (route) => {
   content.innerHTML = "";
   //console.log({route});
   switch (route) {
-    case "": {
+    case "#/login": {
       //console.log("sejecuta loginView")
       return loginView();
 

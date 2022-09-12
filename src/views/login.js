@@ -12,6 +12,7 @@ export function loginView() {
   const divImg = document.createElement("div");
   divImg.classList.add("imgLogo");
   item.appendChild(divImg);
+
   //IMAGEN LOGO
   const logo = document.createElement("img");
   logo.src = "./img/logotransparente.png";
@@ -41,7 +42,7 @@ export function loginView() {
   inputMail.setAttribute("placeholder", "Ingresa tu email");
   inputMail.setAttribute("type", "email");
   inputMail.setAttribute("class", "input");
-  item.appendChild(inputMail);
+  form.appendChild(inputMail);
 
   const inputPassword = document.createElement("input");
   inputPassword.setAttribute("placeholder", "Ingresa tu contraseña");

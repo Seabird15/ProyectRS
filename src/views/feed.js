@@ -8,6 +8,14 @@ export function feedView() {
   profileImg.setAttribute("class", "profileImg");
   profileImg.src = "./img/profile-user.png";
   root.appendChild(profileImg);
+  
+  //boton de cerrar sesion
+  const btnLogOut = document.createElement("button");
+  btnLogOut.setAttribute("id","btnLogOut");
+  btnLogOut.setAttribute("type", "submit");
+  btnLogOut.textContent = "Log Out";
+  root.appendChild(btnLogOut);
+
 
   //BUSCADOR DE AMIGOS
   const Buscador = document.createElement("input");

@@ -27,12 +27,14 @@ window.addEventListener("load", () => {
   const view = router(window.location.hash);
   root.appendChild(view);
 });
+
 //promesa para retornar a muro
 onAuthStateChanged(auth, (user) => {
   if (user) {
     console.log("ya entre");
     const view = router("#/feed");
     root.appendChild(view);
+   
     //promesa para retornar a login en caso de no autenticacion
   } else {
     const view = router("#/login");

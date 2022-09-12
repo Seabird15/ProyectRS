@@ -148,3 +148,6 @@ button:hover {
 .input search {
   margin-left: 50%;
 }
+#btnLogOut{
+    color:  red;
+}
