@@ -70,7 +70,12 @@ export function registerView() {
     const email = inputRegister.value;
     const pass = inputRegisterPass.value;
     createUserWithEmailAndPassword(auth, email, pass).then((userCredential) => {
-      console.log("visto");
+      console.log("Registro exitoso");
+      Swal.fire({
+        icon: "success",
+        title: "Registro exitoso",
+        text: "Se registro exitosamente",
+      });
     });
   });
   return root;

@@ -34,10 +34,11 @@ onAuthStateChanged(auth, (user) => {
     console.log("ya entre");
     const view = router("#/feed");
     root.appendChild(view);
-   
+
     //promesa para retornar a login en caso de no autenticacion
   } else {
     const view = router("#/login");
     root.appendChild(view);
+    window.location.hash = "";
   }
 });

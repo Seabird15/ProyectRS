@@ -1,4 +1,6 @@
 import { loginRoot } from "../main.js";
+import { signOut } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-auth.js";
+import { auth } from "../firebase/startfirebase.js";
 
 export function feedView() {
   const root = document.createElement("div");
@@ -8,14 +10,16 @@ export function feedView() {
   profileImg.setAttribute("class", "profileImg");
   profileImg.src = "./img/profile-user.png";
   root.appendChild(profileImg);
-  
+
   //boton de cerrar sesion
   const btnLogOut = document.createElement("button");
-  btnLogOut.setAttribute("id","btnLogOut");
+  btnLogOut.setAttribute("id", "btnLogOut");
   btnLogOut.setAttribute("type", "submit");
   btnLogOut.textContent = "Log Out";
+  btnLogOut.addEventListener("click", () => {
+    signOut(auth);
+  });
   root.appendChild(btnLogOut);
-
 
   //BUSCADOR DE AMIGOS
   const Buscador = document.createElement("input");
