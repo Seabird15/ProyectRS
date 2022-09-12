@@ -1,6 +1,13 @@
 import { loginRoot } from "../main.js";
 import { registerView } from "./register.js";
 import { router } from "../router/router.js";
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithPopup,
+} from "https://www.gstatic.com/firebasejs/9.9.2/firebase-auth.js";
+import { auth, provider } from "../firebase/startfirebase.js";
 
 export function loginView() {
   console.log("se ejecuta loginView en Login.js");
@@ -44,18 +51,31 @@ export function loginView() {
   inputMail.setAttribute("placeholder", "Ingresa tu email");
   inputMail.setAttribute("type", "email");
   inputMail.setAttribute("class", "input");
+  inputMail.setAttribute("id", "inputMail");
   form.appendChild(inputMail);
 
   const inputPassword = document.createElement("input");
   inputPassword.setAttribute("placeholder", "Ingresa tu contraseña");
   inputPassword.setAttribute("type", "password");
   inputPassword.setAttribute("class", "input");
+  inputPassword.setAttribute("id", "inputPass");
   form.appendChild(inputPassword);
 
   //BOTONES INPUT
   const btnLogin = document.createElement("button");
   btnLogin.setAttribute("class", "linkSubmit");
   btnLogin.setAttribute("type", "submit");
+  btnLogin.addEventListener("click", (e) => {
+    e.preventDefault();
+    const email = document.querySelector("#inputMail").value;
+    const password = document.querySelector("#inputPass").value;
+    //console.log(email, password);
+    signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
+      //callback(true);
+      const user = userCredential.user;
+      console.log("logeada");
+    });
+  });
   btnLogin.innerText = "entrar";
   item.appendChild(btnLogin);
 
@@ -67,6 +87,20 @@ export function loginView() {
   linkRegister.textContent = "¿Aún no tienes una cuenta? ¡Crea una aqui!";
   linkRegister.setAttribute("class", "btnRegister ");
   item.appendChild(linkRegister);
+
+  //BTN GOOGLE
+  const btnGoogle = document.createElement("button");
+  btnGoogle.setAttribute("id", "btnGoogle");
+  btnGoogle.textContent = "google";
+  btnGoogle.addEventListener("click", (event) => {
+    event.preventDefault();
+    signInWithPopup(auth, provider).then((result) => {
+      const credential = GoogleAuthProvider.credentialFromResult(result);
+      console.log("hola2");
+      return credential;
+    });
+  });
+  item.appendChild(btnGoogle);
 
   //contenedor github //No funciona/ iconos estan en el aire sin contenedor
   const gitHub = document.createElement("div");
