@@ -55,10 +55,11 @@ img {
   border-radius: 5px;
   margin-top: 5px;
 }
-i {
+/*i {
   display: flex;
   justify-content: center;
 }
+*/
 /* btns*/
 
 a {
@@ -106,13 +107,14 @@ button:hover {
   margin-top: 100%;
   margin-bottom: 0%;
 }
-.footer {
+/*.footer {
   width: 100%;
   height: 100%;
   display: flex;
   background-color: aqua;
   margin: 2px, black;
 }
+*/
 
 .logoFeed {
   width: 20%;
@@ -134,20 +136,47 @@ button:hover {
 /*IMG PROFILE*/
 .profileImg {
   float: right;
-  margin: 5px;
-  width: 10%;
-  height: 10%;
+  margin: 0%;
+  width: 8%;
+  height: 8%;
+  margin-right: 10%;
 }
 
-/* Git */
+/* Git 
 .fa-brands {
-  margin-left: 23%;
-  margin-top: 6%;
+  float: center;
+  width: 50%;
 }
+*/
+footer {
+  display: inline-block;
+  margin: 2%;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.githubs {
+margin-top: 1%;
+display:flex;
+width:10%;
+height: 10%;
+margin-left: 45%;
+}
+#img {
+  width: 100%;
+  height: 100%;
+}
+
 
 .input search {
   margin-left: 50%;
 }
 #btnLogOut{
     color:  red;
+    position: float;
+    margin-right: 1%;
+}
+#Buscador{
+  position: static;
 }

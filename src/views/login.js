@@ -68,6 +68,7 @@ export function loginView() {
   linkRegister.setAttribute("class", "btnRegister ");
   item.appendChild(linkRegister);
 
+  /*
   //contenedor github //No funciona/ iconos estan en el aire sin contenedor
   const gitHub = document.createElement("div");
   gitHub.setAttribute("class", "gitContainer");
@@ -102,6 +103,7 @@ export function loginView() {
   );
   linkGit3.setAttribute("target", "_blank");
   item.appendChild(linkGit3);
+  */
 
   form.addEventListener("submit", () => {
     console.log("submit");
