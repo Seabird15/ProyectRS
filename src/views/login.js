@@ -35,6 +35,7 @@ export function loginView() {
   const form = document.createElement("form");
   form.classList.add("form");
   item.appendChild(form);
+
   //INPUTS LOGIN
   const inputMail = document.createElement("input");
   inputMail.setAttribute("placeholder", "Ingresa tu email");
@@ -47,12 +48,12 @@ export function loginView() {
   inputPassword.setAttribute("type", "password");
   inputPassword.setAttribute("class", "input");
   form.appendChild(inputPassword);
-  
+
   //BOTONES INPUT
   const btnLogin = document.createElement("button");
   btnLogin.setAttribute("class", "linkSubmit");
   btnLogin.setAttribute("type", "submit");
-  btnLogin.innerText = "entrar"
+  btnLogin.innerText = "entrar";
   item.appendChild(btnLogin);
 
   //BOTON REGISTRARSE
@@ -64,35 +65,42 @@ export function loginView() {
 
   //contenedor github //No funciona/ iconos estan en el aire sin contenedor
   const gitHub = document.createElement("div");
-  gitHub.setAttribute("class","gitContainer")
+  gitHub.setAttribute("class", "gitContainer");
   item.appendChild(gitHub);
 
   //Git Dani//
   const linkGit1 = document.createElement("a");
   linkGit1.setAttribute("class", "fa-brands fa-github fa-2x");
-  linkGit1.setAttribute("href", "https://github.com/Seabird15/SCL021-social-network");
+  linkGit1.setAttribute(
+    "href",
+    "https://github.com/Seabird15/SCL021-social-network"
+  );
   linkGit1.setAttribute("target", "_blank");
   item.appendChild(linkGit1);
 
-   //Git Liss//
+  //Git Liss//
   const linkGit2 = document.createElement("a");
   linkGit2.setAttribute("class", "fa-brands fa-github fa-2x");
-  linkGit2.setAttribute("href", "https://github.com/LissetteQ/SCL021-social-network");
+  linkGit2.setAttribute(
+    "href",
+    "https://github.com/LissetteQ/SCL021-social-network"
+  );
   linkGit2.setAttribute("target", "_blank");
   item.appendChild(linkGit2);
 
-   //Git Nico//
+  //Git Nico//
   const linkGit3 = document.createElement("a");
   linkGit3.setAttribute("class", "fa-brands fa-github fa-2x");
-  linkGit3.setAttribute("href", "https://github.com/Nicobustosgonzalez/SCL021-social-network");
+  linkGit3.setAttribute(
+    "href",
+    "https://github.com/Nicobustosgonzalez/SCL021-social-network"
+  );
   linkGit3.setAttribute("target", "_blank");
   item.appendChild(linkGit3);
 
   form.addEventListener("submit", () => {
-    console.log("submit")
-  } )
-  
-  
-  return item;
+    console.log("submit");
+  });
 
+  return item;
 }

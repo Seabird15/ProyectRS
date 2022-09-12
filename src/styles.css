@@ -1,150 +1,150 @@
-@import url('http://fonts.cdnfonts.com/css/maus');
+@import url("http://fonts.cdnfonts.com/css/maus");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    width: auto;
-    height: auto;
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: auto;
+  height: auto;
 }
 
 body {
-    background: rgb(254,74,121);
-    background: linear-gradient(257deg, rgba(254,74,121,1) 0%, rgba(255,135,178,1) 47%, rgba(255,248,188,1) 100%);
-    max-height: 100%;
-max-height: 100%;
+  background: rgb(254, 74, 121);
+  background: linear-gradient(
+    257deg,
+    rgba(254, 74, 121, 1) 0%,
+    rgba(255, 135, 178, 1) 47%,
+    rgba(255, 248, 188, 1) 100%
+  );
+  max-height: 100%;
+  max-height: 100%;
 }
 /*VIEW LOGIN*/
 .imgLogo {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 img {
-    width: 18%;
-    height: 18%;
+  width: 18%;
+  height: 18%;
 }
 #logo {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 .title {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
-.titleLogin{
-    display: flex;
-    justify-content: center;
-    color: rgb(243, 246, 248);
-    font-family: 'Maus', sans-serif;
-    font-size: 400%;
+.titleLogin {
+  display: flex;
+  justify-content: center;
+  color: rgb(243, 246, 248);
+  font-family: "Maus", sans-serif;
+  font-size: 400%;
 }
 .subtituloLogin {
-    text-align: center;
-    color: white;
-    
+  text-align: center;
+  color: white;
 }
-.input{
-    display: block;
-    margin: auto;
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 5px;
+.input {
+  display: block;
+  margin: auto;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 5px;
 }
-i{
-    display: flex;
-    justify-content: center;
+i {
+  display: flex;
+  justify-content: center;
 }
 /* btns*/
 
 a {
-    display: flex;
-    justify-content: center;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
+  display: flex;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
 }
 
-button{
-    display: block;
-    margin: auto;
-    padding: 1%;
-    border-radius: 5px;
+button {
+  display: block;
+  margin: auto;
+  padding: 1%;
+  border-radius: 5px;
 }
 button:hover {
-    background-color: tomato;
-    cursor: pointer;
+  background-color: tomato;
+  cursor: pointer;
 }
 .btnRegister {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
-/*VIEWS REGISTER*/ 
+/*VIEWS REGISTER*/
 
-.h2Register{
-    color: white;
-    text-align: center;
+.h2Register {
+  color: white;
+  text-align: center;
 }
 
 /*VIEW FEED*/
 
 .logoFeed {
-    width: 7%;
-    height: 7%;
-    margin-top: 2%;
-    margin-left: 2%;
+  width: 7%;
+  height: 7%;
+  margin-top: 2%;
+  margin-left: 2%;
 }
-.i{
-    width: 10%;
-    height: 10%;
-    opacity: 30%;
-    display:inline-block;
-    margin-top: 100%;
-    margin-bottom: 0%;
+.i {
+  width: 10%;
+  height: 10%;
+  opacity: 30%;
+  display: inline-block;
+  margin-top: 100%;
+  margin-bottom: 0%;
 }
 .footer {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    background-color: aqua;
-    margin: 2px, black;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: aqua;
+  margin: 2px, black;
 }
 
 .logoFeed {
-    width: 20%;
-    height: 20%;
-    margin-top: 10%;
-    margin-left: 5%;
-    display:inline-block;
+  width: 20%;
+  height: 20%;
+  margin-top: 10%;
+  margin-left: 5%;
+  display: inline-block;
 }
 /*INPUT FEED*/
-.inputFeedState{
-    padding: 10%;
-    border-radius: 10%;
+.inputFeedState {
+  padding: 10%;
+  border-radius: 10%;
 }
 .fileFeed {
-    display: block;
-    margin: auto;
-    margin-top: 5px;
-    
+  display: block;
+  margin: auto;
+  margin-top: 5px;
 }
 /*IMG PROFILE*/
-.profileImg{
-    float:right;
-    margin: 5px;
-    width: 10%;
-    height: 10%;
-}   
-
-/* Git */
-.fa-brands{
-    margin-left: 23%;
-    margin-top: 6%; 
-    
+.profileImg {
+  float: right;
+  margin: 5px;
+  width: 10%;
+  height: 10%;
 }
 
+/* Git */
+.fa-brands {
+  margin-left: 23%;
+  margin-top: 6%;
+}
 
-.input search{
-margin-left: 50%;
-
+.input search {
+  margin-left: 50%;
 }

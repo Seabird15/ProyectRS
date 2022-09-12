@@ -44,16 +44,16 @@ export function registerView() {
   //INPUT REGISTER PASS
   const inputRegisterPass = document.createElement("input");
   inputRegisterPass.setAttribute("placeholder", "Ingresa tu contraseña");
-  inputRegisterPass.setAttribute("id","password");
-  inputRegisterPass.setAttribute("name","password");
+  inputRegisterPass.setAttribute("id", "password");
+  inputRegisterPass.setAttribute("name", "password");
   inputRegisterPass.setAttribute("class", "input");
   inputRegisterPass.setAttribute("type", "password");
   form.appendChild(inputRegisterPass);
-  
+
   //INPUT NOMBRE USUARIO
   const inputRegisterUser = document.createElement("input");
   inputRegisterUser.setAttribute("placeholder", "Nombre usuario");
-  inputRegisterUser.setAttribute("id","userName");
+  inputRegisterUser.setAttribute("id", "userName");
   inputRegisterUser.setAttribute("name", "userName");
   inputRegisterUser.setAttribute("type", "text");
   inputRegisterUser.setAttribute("class", "input");
@@ -63,18 +63,15 @@ export function registerView() {
   const btnRegister = document.createElement("button");
   btnRegister.textContent = "Enviar";
   form.appendChild(btnRegister);
-  
+
   //se añade la funcion para registrarse y crear cuenta
-  form.addEventListener("submit", e => {
+  form.addEventListener("submit", (e) => {
     e.preventDefault();
     const email = inputRegister.value;
     const pass = inputRegisterPass.value;
-    createUserWithEmailAndPassword(auth, email, pass).then((userCredential)=>{
-
-      console.log("visto")
-    })
-   
-
- }) 
- return root;
+    createUserWithEmailAndPassword(auth, email, pass).then((userCredential) => {
+      console.log("visto");
+    });
+  });
+  return root;
 }
