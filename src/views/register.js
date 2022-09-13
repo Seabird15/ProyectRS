@@ -36,10 +36,13 @@ export function registerView() {
   const inputRegister = document.createElement("input");
   inputRegister.setAttribute("placeholder", "Ingresa tu correo");
   inputRegister.setAttribute("id", "email");
+  //inputRegister.setAttribute("type", "submit")
+  //inputRegister.setAttribute("value", "validate")
   inputRegister.setAttribute("name", "email");
   inputRegister.setAttribute("class", "input");
-  inputRegister.setAttribute("type", "text");
+  inputRegister.placeholder = "correo electronico"
   form.appendChild(inputRegister);
+  
 
   //INPUT REGISTER PASS
   const inputRegisterPass = document.createElement("input");
@@ -62,11 +65,39 @@ export function registerView() {
   //BUTTON REGISTER
   const btnRegister = document.createElement("button");
   btnRegister.textContent = "Enviar";
+  btnRegister.setAttribute ("type", "submit")
+  btnRegister.setAttribute("value", "validate")
+  btnRegister.setAttribute ("id", "registerButton")
   form.appendChild(btnRegister);
+
+  function validateEmail(){
+    let emailField = document.getElementById('email')
+    let validEmail =  /^\w+([.-_+]?\w+)@\w+([.-]?\w+)(\.\w{2,10})+$/;
+    if(validEmail.test(emailField.value)){
+      Swal.fire({
+        icon: "success",
+        title: "Registro exitoso",
+        text: "Se registro exitosamente",
+      });
+      return true;
+    }else{
+      Swal.fire({
+        icon: "Fail",
+        title: "Correo invalido",
+        text: "Ingrese un correo valido",
+      });
+      return false;
+    }
+
+  }
 
   //se añade la funcion para registrarse y crear cuenta
   form.addEventListener("submit", (e) => {
     e.preventDefault();
+    let isValid = validateEmail();
+    if (!isValid){
+      return 
+    }
     const email = inputRegister.value;
     const pass = inputRegisterPass.value;
     createUserWithEmailAndPassword(auth, email, pass).then((userCredential) => {

@@ -64,10 +64,14 @@ img {
 /* btns*/
 
 a {
-  display: flex;
+  display: inline;
   justify-content: center;
   color: #F65A83;
   text-decoration: none;
+  margin-right: 30%;
+  margin-left: 38%;
+  margin-top: 1%;
+  margin-bottom: 1%;
 }
 
 button {

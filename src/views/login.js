@@ -1,6 +1,6 @@
-import { loginRoot } from "../main.js";
-import { registerView } from "./register.js";
-import { router } from "../router/router.js";
+//import { loginRoot } from "../main.js";
+//import { registerView } from "./register.js";
+//import { router } from "../router/router.js";
 import {
   getAuth,
   signInWithEmailAndPassword,
@@ -99,7 +99,11 @@ export function loginView() {
   //Llamar al evento y a la ventana, si se logra logear mostrar console.log (cambiar por SweetAlert)
   btnGoogle.addEventListener("click", (e) => {
     signInWithPopup(auth, provider).then((result) => {
-      console.log("funciona wi");
+      Swal.fire({
+        icon: "success",
+        title: "Login exitoso",
+        text: "Ingreso exitoso",
+      });
     });
   });
   btnGoogle.setAttribute("id", "btnGoogle");
