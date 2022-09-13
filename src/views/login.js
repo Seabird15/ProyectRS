@@ -82,7 +82,7 @@ export function loginView() {
         console.log("nope");
       });
   });
-  btnLogin.innerText = "entrar";
+  btnLogin.innerText = "Entrar";
   item.appendChild(btnLogin);
 
   //BOTON REGISTRARSE
@@ -156,6 +156,7 @@ export function loginView() {
   );
   linkGit3.setAttribute("target", "_blank");
   item.appendChild(linkGit3);
+  
 
   form.addEventListener("submit", () => {
     console.log("submit");
