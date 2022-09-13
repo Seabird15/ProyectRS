@@ -7,8 +7,10 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   width: auto;
   height: auto;
+  align-items: center;
+  align-self: center;
+  align-content: center;
 }
-
 body {
   background-repeat: no-repeat;
   background: rgb(254, 74, 121);
@@ -52,9 +54,12 @@ img {
 .input {
   display: block;
   margin: auto;
-  padding: 10px;
+ padding: 0.5%;
+ padding-left: 5%;
+ padding-right: 5%;
   border-radius: 5px;
   margin-top: 5px;
+  justify-self: center;
 }
 /*i {
   display: flex;
@@ -66,33 +71,40 @@ img {
 a {
   display: inline;
   justify-content: center;
-  color: #F65A83;
+  color: #FFFFFF;
   text-decoration: none;
-  margin-right: 30%;
-  margin-left: 38%;
-  margin-top: 1%;
-  margin-bottom: 1%;
+  text-align: center;
+  margin-left: 37%;
+}
+a[target] {
+  margin: 0%;
+  margin-top: 11%;
+  margin-left: 2%;
+  text-align: center;
 }
 
 button {
+  font-size: large;
+  width: 20%;
+  height: 30%;
   display: block;
   margin: auto;
-  margin-top: 5px;
+  margin-top: 1%;
   border-radius: 2%;
   color: #F65A83;
   background: #FFE898;
 }
 button:hover {
-  background-color: #FFF8BC;
+  background-color: #FFFFFF;
   color: #F65A83;
 }
 .btnRegister {
-  color: #F65A83;
-  background: #FFE898;
+  color: #FFFFFF;
+  background: transparent;
   border: none;
   font-size:large;
-  margin-top: 1%;
-  border-radius: 2%;
+  width: 40%;
+  height: 40%;
   
 }
 #btnGoogle, #btnFacebook {
@@ -131,14 +143,6 @@ button:hover {
   margin-top: 100%;
   margin-bottom: 0%;
 }
-/*.footer {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  background-color: aqua;
-  margin: 2px, black;
-}
-*/
 
 .logoFeed {
   width: 20%;
@@ -147,6 +151,7 @@ button:hover {
   margin-left: 5%;
   display: inline-block;
 }
+
 /*INPUT FEED*/
 .inputFeedState {
   padding: 10%;
@@ -165,12 +170,6 @@ button:hover {
   height: 8%;
   margin-right: 10%;
 }
-
- Git 
- .fa-brands .fa-github .fa-2x {
-  position: absolute;
- }
-
 
 
 .input search {

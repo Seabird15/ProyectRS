@@ -1,6 +1,10 @@
 import { loginRoot } from "../main.js";
 import { signOut } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-auth.js";
 import { auth } from "../firebase/startfirebase.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-firestore.js";
+import { db } from "../firebase/startfirebase.js";
+import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-firestore.js";
+
 
 export function feedView() {
   const root = document.createElement("div");
@@ -57,6 +61,7 @@ export function feedView() {
   root.appendChild(btnStateImg);
   const btnStateFeed = document.createElement("button");
   btnStateFeed.textContent = "Publicar";
+  btnStateFeed.addEventListener("click" , () =>{} )
   root.appendChild(btnStateFeed);
 
   return root;
