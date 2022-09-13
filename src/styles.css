@@ -10,13 +10,14 @@
 }
 
 body {
+  background-repeat: no-repeat;
   background: rgb(254, 74, 121);
   background: linear-gradient(
     257deg,
     rgba(254, 74, 121, 1) 0%,
     rgba(255, 135, 178, 1) 47%,
     rgba(255, 248, 188, 1) 100%
-  );
+  ) no-repeat center center fixed;
   max-height: 100%;
   max-height: 100%;
 }
@@ -72,16 +73,24 @@ a {
 button {
   display: block;
   margin: auto;
-  padding: 1%;
+  padding: 2%;
+  margin-top: 5px;
   border-radius: 5px;
 }
 button:hover {
-  background-color: tomato;
+  background-color: rgb(238, 208, 203);
   cursor: pointer;
 }
 .btnRegister {
-  text-decoration: none;
-  color: white;
+  color: rgb(0, 0, 0);
+  background: none;
+  border: none;
+}
+#btnGoogle, #btnFacebook {
+  display: block;
+  margin: auto;
+  padding: 5px;
+  font-size: 20px;
 }
 
 /*VIEWS REGISTER*/

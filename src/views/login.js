@@ -7,7 +7,8 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
 } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-auth.js";
-import { auth, provider } from "../firebase/startfirebase.js";
+import { auth, provider, providerFace } from "../firebase/startfirebase.js";
+import { firebaseConfig } from "../firebase/config.js";
 
 export function loginView() {
   console.log("se ejecuta loginView en Login.js");
@@ -70,11 +71,16 @@ export function loginView() {
     const email = document.querySelector("#inputMail").value;
     const password = document.querySelector("#inputPass").value;
     //console.log(email, password);
-    signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
-      //callback(true);
-      const user = userCredential.user;
-      console.log("logeada");
-    });
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        //callback(true);
+        const user = userCredential.user;
+        console.log("logeada");
+      })
+      //capturar error en email o pass y enviar alerta
+      .catch((error) => {
+        console.log("nope");
+      });
   });
   btnLogin.innerText = "entrar";
   item.appendChild(btnLogin);
@@ -90,17 +96,31 @@ export function loginView() {
 
   //BTN GOOGLE
   const btnGoogle = document.createElement("button");
-  btnGoogle.setAttribute("id", "btnGoogle");
-  btnGoogle.textContent = "google";
-  btnGoogle.addEventListener("click", (event) => {
-    event.preventDefault();
+  //Llamar al evento y a la ventana, si se logra logear mostrar console.log (cambiar por SweetAlert)
+  btnGoogle.addEventListener("click", (e) => {
     signInWithPopup(auth, provider).then((result) => {
-      const credential = GoogleAuthProvider.credentialFromResult(result);
-      console.log("hola2");
-      return credential;
+      console.log("funciona wi");
     });
   });
+  btnGoogle.setAttribute("id", "btnGoogle");
+  btnGoogle.setAttribute("type", "button");
+  btnGoogle.textContent = "Google ";
+  btnGoogle.className = "fa-brands fa-google-plus fa-2x";
   item.appendChild(btnGoogle);
+
+  //BTN FACEBOOK
+  const btnFacebook = document.createElement("button");
+  btnFacebook.addEventListener("click", (e) => {
+    e.preventDefault();
+    signInWithPopup(auth, providerFace).then((result) => {
+      console.log("hola");
+    });
+  });
+  btnFacebook.setAttribute("id", "btnFacebook");
+  btnFacebook.setAttribute("type", "submit");
+  btnFacebook.textContent = "Facebook";
+  btnFacebook.className = "fa-brands fa-facebook-plus fa-x2";
+  item.appendChild(btnFacebook);
 
   //contenedor github //No funciona/ iconos estan en el aire sin contenedor
   const gitHub = document.createElement("div");
