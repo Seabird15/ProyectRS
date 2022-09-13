@@ -17,7 +17,10 @@ export function feedView() {
   btnLogOut.setAttribute("type", "submit");
   btnLogOut.textContent = "Log Out";
   btnLogOut.addEventListener("click", () => {
-    signOut(auth);
+    signOut(auth).then(() => {
+      //COLOCAR ALERTA PARA CERRAR SESION
+      console.log("Haz cerrado sesión");
+    });
   });
   root.appendChild(btnLogOut);
 

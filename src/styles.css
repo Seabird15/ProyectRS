@@ -85,6 +85,12 @@ button:hover {
   background: none;
   border: none;
 }
+#btnGoogle, #btnFacebook {
+  display: block;
+  margin: auto;
+  padding: 5px;
+  font-size: 20px;
+}
 
 /*VIEWS REGISTER*/
 
