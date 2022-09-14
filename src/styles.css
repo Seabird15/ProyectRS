@@ -145,30 +145,37 @@ button:hover {
 }
 
 .logoFeed {
-  width: 20%;
-  height: 20%;
-  margin-top: 10%;
-  margin-left: 5%;
-  display: inline-block;
+  width: 8%;
+  height: 8%;
+  margin-top: -6%;
+  margin-left: 0%;
+  float: left;
 }
 
 /*INPUT FEED*/
 .inputFeedState {
   padding: 10%;
   border-radius: 10%;
+  margin-top: 15%;
+  
 }
 .fileFeed {
+  float: left;
   display: block;
   margin: auto;
   margin-top: 5px;
 }
 /*IMG PROFILE*/
 .profileImg {
-  float: right;
+  float: left;
   margin: 0%;
-  width: 8%;
-  height: 8%;
-  margin-right: 10%;
+  width: 5%;
+  height: 5%;
+  margin-right: 0%;
+  margin-top: 0%;
+  margin-left: 8%;
+
+  
 }
 
 
@@ -176,9 +183,11 @@ button:hover {
   margin-left: 50%;
 }
 #btnLogOut{
-    color:  red;
+    color: #F65A83;
     position: float;
     margin-right: 1%;
+    background: #FFE898;
+    font-family: Arial, Helvetica, sans-serif;
 }
 #Buscador{
   position: static;
