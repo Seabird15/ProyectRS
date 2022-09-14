@@ -4,7 +4,7 @@ import { auth } from "../firebase/startfirebase.js";
 import { getFirestore } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-firestore.js";
 import { db } from "../firebase/startfirebase.js";
 import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-firestore.js";
-
+import { CreatePost } from "../services/databaseservice.js";
 
 export function feedView() {
   const root = document.createElement("div");
@@ -33,6 +33,7 @@ export function feedView() {
   Buscador.setAttribute("class", "Buscador");
   Buscador.setAttribute("type", "search");
   Buscador.setAttribute("style", "margin-left:20%");
+  Buscador.setAttribute("placeholder", "Buscar amigos");
   root.appendChild(Buscador);
 
   //CAJA DE ESTADO Y LOGO
@@ -51,17 +52,19 @@ export function feedView() {
   inputFeedState.setAttribute("class", "inputFeedState");
   inputFeedState.setAttribute("placeholder", "¿En qué estas pensando?");
   inputFeedState.setAttribute("type", "text");
+  const btnStateFeed = document.createElement("button");
+  btnStateFeed.textContent = "Publicar";
+  btnStateFeed.addEventListener("click" , () =>{CreatePost("Hola")});
+
   containFeed.appendChild(inputFeedState);
 
   //input para publicar imagenes
-  const btnStateImg = document.createElement("input");
-  btnStateImg.setAttribute("type", "file");
-  btnStateImg.setAttribute("class", "fileFeed");
-  btnStateImg.setAttribute("accept", "image/*");
-  root.appendChild(btnStateImg);
-  const btnStateFeed = document.createElement("button");
-  btnStateFeed.textContent = "Publicar";
-  btnStateFeed.addEventListener("click" , () =>{} )
+  //const btnStateImg = document.createElement("input");
+  //btnStateImg.setAttribute("type", "file");
+  //btnStateImg.setAttribute("class", "fileFeed");
+  //btnStateImg.setAttribute("accept", "image/*");
+  //root.appendChild(btnStateImg);
+  
   root.appendChild(btnStateFeed);
 
   return root;
