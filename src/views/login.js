@@ -13,6 +13,7 @@ import { firebaseConfig } from "../firebase/config.js";
 export function loginView() {
   console.log("se ejecuta loginView en Login.js");
   const item = document.createElement("div");
+  item.setAttribute("id", "itemId")
   const title = document.createElement("h1");
   title.textContent = "iPet";
   title.setAttribute("class", "titleLogin");
@@ -21,7 +22,7 @@ export function loginView() {
   //CONTENEDOR IMAGEN
   const divImg = document.createElement("div");
   divImg.classList.add("imgLogo");
-  item.appendChild(divImg);
+  item.appendChild(divImg); 
 
   //IMAGEN LOGO
   const logo = document.createElement("img");
@@ -39,7 +40,7 @@ export function loginView() {
   const linkRecuperarPass = document.createElement("a");
   linkRecuperarPass.setAttribute("href", "#");
   linkRecuperarPass.textContent = "¿Has olvidado tu contraseña?";
-  linkRecuperarPass.setAttribute("class", "btnRegister");
+  linkRecuperarPass.setAttribute("class", "btnRecovery");
   item.appendChild(linkRecuperarPass);
 
   //CREAR FORM INPUTS

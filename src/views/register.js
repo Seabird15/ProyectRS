@@ -4,6 +4,7 @@ import { auth } from "../firebase/startfirebase.js";
 
 export function registerView() {
   const root = document.createElement("div");
+  root.setAttribute("id", "rootId")
   const title = document.createElement("h1");
   title.textContent = "iPet";
   title.setAttribute("class", "titleLogin");
@@ -19,7 +20,7 @@ export function registerView() {
   logo.src = "./img/logotransparente.png";
   logo.setAttribute("class", "img");
   logo.setAttribute("id", "logo");
-  divImg.appendChild(logo);
+  root.appendChild(logo);
 
   //TITULO CREA AQUI TU CUENTA
   const titleRegister = document.createElement("h2");
@@ -64,7 +65,7 @@ export function registerView() {
 
   //BUTTON REGISTER
   const btnRegister = document.createElement("button");
-  btnRegister.textContent = "Enviar";
+  btnRegister.textContent = "Registrarse";
   btnRegister.setAttribute ("type", "submit")
   btnRegister.setAttribute("value", "validate")
   btnRegister.setAttribute ("id", "registerButton")
@@ -101,6 +102,7 @@ export function registerView() {
     const email = inputRegister.value;
     const pass = inputRegisterPass.value;
     createUserWithEmailAndPassword(auth, email, pass).then((userCredential) => {
+      
       console.log("Registro exitoso");
       Swal.fire({
         icon: "success",
