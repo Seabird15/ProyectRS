@@ -12,9 +12,7 @@
   align-content: center;
 }
 body {
-  background: url(./img/the-pretty-girl-embarcing-cat-and-dog.jpg)no-repeat center center fixed;;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: #f1bcca;
 }
 #itemId{
   background-color: #f65a8461;
@@ -138,18 +136,23 @@ button:hover {
   color: white;
   text-align: center;
 }
-
+/*VIEW FEED POSTS*/
+.postBox {
+  background-color: #ee7495c3;
+  text-align: center;
+  padding: 2px;
+  border: 1px solid black;
+  margin: 10px;
+  border-radius: 5px;
+}
 /*VIEW FEED*/
 .divNav {
   background-color: #f65a846d;
   display: flex;
   justify-content: end;
-
 }
-
 #logoFeed{
   width: 10%;
-
 }
 .inputSearch {
   margin: 2px;
@@ -176,6 +179,7 @@ button:hover {
 .inputFeedState {
   display: block;
   margin: auto;
+  margin-top: 10px;
   padding: 10%;
   border-radius: 10%;
   
@@ -219,8 +223,7 @@ button:hover {
 /* VIEW DESKTOP */ 
 @media (min-width: 1024px) {
   body {
-  background-image: url(./img/the-pretty-girl-embarcing-cat-and-dog.jpg);
-  background-size: cover;
+    background-color: #f1bcca;
   }
 #itemId {
   position: fixed;
@@ -261,14 +264,18 @@ button:hover {
   padding: 2%;
   width: 30%;
   border-radius: 10%;
-  
-  
 }
 .fileFeed {
   float: left;
   display: block;
   margin: auto;
   margin-top: 5px;
+}
+.postBox{
+  width: 20%;
+  margin: 0 auto;
+  margin-top: 10px;
+
 }
 }
 

@@ -3,8 +3,11 @@ import { signOut } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-auth.
 import { auth } from "../firebase/startfirebase.js";
 import { getFirestore } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-firestore.js";
 import { db } from "../firebase/startfirebase.js";
-import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-firestore.js";
-import { CreatePost } from "../services/databaseservice.js";
+import { collection, addDoc, getDoc, getDocs, orderBy, Timestamp, deleteDoc, updateDoc, query, doc, increment, arrayUnion, arrayRemove } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-firestore.js";
+import { CreatePost, getPosts } from "../services/databaseservice.js";
+
+
+
 
 export function feedView() {
   const root = document.createElement("div");
@@ -29,7 +32,7 @@ export function feedView() {
   btnUserNav.setAttribute("class", "btnNav")
   btnUserNav.textContent ="user"
   divNav.appendChild(btnUserNav)
-
+ //boton de cerrar sesion
   const btnLogOutNav = document.createElement("button")
   btnLogOutNav.setAttribute("class", "btnNav")
   btnLogOutNav.setAttribute("id", "btnLogOut")
@@ -38,7 +41,7 @@ export function feedView() {
   btnLogOutNav.addEventListener("click", ()=>{
     signOut(auth).then(()=> {
       //alerta cierre sesion
-      alert("Haz cerrado sesion")
+      Swal.fire("Haz cerrado sesion")
     })
   })
   divNav.appendChild(btnLogOutNav)
@@ -46,16 +49,64 @@ export function feedView() {
   //caja de publicacion
   const inputFeedState = document.createElement("input")
   inputFeedState.setAttribute("class","inputFeedState")
+  inputFeedState.setAttribute("id","valueInputFeed")
   inputFeedState.setAttribute("placeholder","¿Qué estas pensando?")
   inputFeedState.setAttribute("type","text")
   root.appendChild (inputFeedState)
   //btnPublicarFeed 
   const btnStateFeed = document.createElement("button")
   btnStateFeed.textContent ="Publicar"
-  btnStateFeed.addEventListener("click", ()=>{CreatePost("Hola")});
+  btnStateFeed.addEventListener("click", (e)=>{
+    e.preventDefault();
+    const valueInputFeed = document.querySelector("#valueInputFeed").value;
+    console.log(valueInputFeed)
+    //CreatePost("Hola")
+    CreatePost(valueInputFeed);
+    inputClear();
+  });
+
+  //limpiar input despues de publicar 
+  const inputClear = () =>{
+    document.querySelector('#valueInputFeed').value = "";
+  }
   root.appendChild(btnStateFeed)
 
+  getPosts((post)=> {
+    console.log(post)
+    //div
+    const postBox = document.createElement("div");
+    postBox.setAttribute("class", "postBox");
+    root.appendChild(postBox);
+    //btn like
+    const likedBtn = document.createElement("button")
+    likedBtn.setAttribute("id","likeBtn")
+    likedBtn.textContent ="like"
+    postBox.appendChild(likedBtn)
+    //btn delete post
+    const deleteBtn = document.createElement("button")
+    deleteBtn.setAttribute("class","deleteBtn")
+    deleteBtn.textContent = "Borrar"
+    postBox.appendChild(deleteBtn)
+    //content post
+    const PostCard = document.createElement("p");
+    PostCard.setAttribute("class", "postCard")
+    PostCard.innerHTML = post.content;
+    postBox.appendChild(PostCard);
+    
 
- 
+
+  }) 
+  
+
+
+  //no funciona uwu
+    // const liked = document.querySelectorAll('#imgUser');
+    // liked.addEventListener('click', ()=> {
+    //   const like = e.target.dataset.idlikes;
+    //   const selectedPost = e.target;
+    //   console.log(like)
+    // })
+
+
   return root;
 }

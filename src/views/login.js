@@ -80,7 +80,7 @@ export function loginView() {
       })
       //capturar error en email o pass y enviar alerta
       .catch((error) => {
-        console.log("nope");
+        Swal.fire("Las credenciales no son validas o no existen, intenta de nuevo o registrate :)");
       });
   });
   btnLogin.innerText = "Entrar";
