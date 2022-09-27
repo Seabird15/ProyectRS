@@ -3,13 +3,18 @@ import { collection, addDoc, query, onSnapshot, Timestamp, doc,getDocs,getDoc } 
 
 
 async function CreatePost (text){
+  try {
     const Post = await addDoc(collection(db, "Posts"), {
-        content : text,
-        likes : [],
-        uid: auth.currentUser.uid,
-        likesCounter:0,
-        datepost: Timestamp.fromDate(new Date()),
-      })
+      content : text,
+      likes : [],
+      uid: auth.currentUser.uid,
+      likesCounter:0,
+      datepost: Timestamp.fromDate(new Date()),
+    })
+  } catch (error) {
+      console.log(error)
+  }
+
 }
 const getPosts = (callback) =>{
   const q = query(collection(db, "Posts"));
@@ -24,6 +29,7 @@ const unsubscribe = onSnapshot(q, (postData) => {
   })
 })
 });
+
 
 }
 export { CreatePost,getPosts };

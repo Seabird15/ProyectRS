@@ -28,7 +28,7 @@ window.addEventListener("load", () => {
   root.appendChild(view);
 });
 
-//promesa para retornar a muro
+//callback para retornar a muro
 onAuthStateChanged(auth, (user) => {
   if (user) {
     console.log("ya entre");
